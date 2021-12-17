@@ -21,11 +21,25 @@ function textChange() {
   view.onclick = textChange;
   close.onclick = textReturn;
 
-
+  
 // Removing Event Handlers
 eventTarget.removeEventListener('click', eventHandlerFunction);
 
-// more event mouse wheel / keyboard
+// Event Object Properties
+let social = document.getElementById('social-media');
+let share = document.getElementById('share-button');
+let text = document.getElementById('text');
+
+// Write your code below
+let sharePhoto = function(event) {
+  event.target.style.display = 'none'
+  text.innerHTML = event.timeStamp
+}
+
+share.onclick = sharePhoto;
+
+
+// more event mouse wheel + keyboard
 mysteryButton.addEventListener('wheel', colorChange);
 itemOne.addEventListener('mouseover', increaseWidth);
 itemTwo.addEventListener('mouseup', changeBackground);
